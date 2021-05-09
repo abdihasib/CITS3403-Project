@@ -79,7 +79,5 @@ nav a:active {
 }
 
 .cardImage {
-  max-width: 450px; 
-  max-height: 320px;
   border-radius: 0% 0% 10% 10%;
 }
