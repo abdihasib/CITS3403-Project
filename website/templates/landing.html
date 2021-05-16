@@ -17,10 +17,19 @@
             <span class="highlights"><i class="fas fa-dumbbell"></i> Gym</span>Pal
         </h1>
         <nav>
+            {% if current_user.is_authenticated %}
             <ul>
-                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                <li><a href="{{ url_for('main.courses') }}" class="navbar-item">Courses</a></li>
+                <li><a href="{{ url_for('main.profile') }}" class="navbar-item">Profile</a></li>
+                <li><a href="{{ url_for('main.quiz') }}" class="navbar-item">Quiz</a></li>
+                <li><a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+            </ul>
+            {% else %}
+            <ul>
+                <li><a href="{{ url_for('main.home') }}" class="navbar-item">Home</a></li>
                 <li><a href="{{ url_for('auth.login') }}" class="navbar-item">Login</a></li>
             </ul>
+            {% endif %}
         </nav>
     </div>
 </div>
@@ -30,7 +39,7 @@
             <h1>Body Building Made Easy</h1>
             <p>Come and learn with us all things fitness. Our courses cover a wide range of topics from Strength &
                 Muscle building and even building your meals</p>
-            <a href="/readmore" class="btn btn-outline">Read More</a>
+            <a href="{{ url_for('main.courses') }}" class="btn btn-outline">Read More</a>
         </div>
 
         <div class="showcase-form card">
@@ -82,27 +91,6 @@
         </div>
     </div>
 </section>
-
-<section class="courses">
-    <h2 class="md text-center my-2">
-        Courses
-    </h2>
-    <div class="container flex">
-        <div class="card">
-            <h4>Build Muscle</h4>
-            <img src="../static/images/muscle.jpg" alt="" style="width: 300px; height: 200px">
-        </div>
-        <div class="card">
-            <h4>Build Strength</h4>
-            <img src="../static/images/strength.jpg" alt="" style="width: 300px; height: 200px">
-        </div>
-        <div class="card">
-            <h4>Lose Weight</h4>
-            <img src="../static/images/weight.jpg" alt="" style="width: 300px; height: 200px">
-        </div>
-    </div>
-</section>
-
 <footer class="footer bg-dark py-5">
     <div class="container grid grid-3">
         <div>

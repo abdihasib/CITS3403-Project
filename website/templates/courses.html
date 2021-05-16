@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}"/>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/utilities.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/readmore.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/courses.css') }}">
     <!-- Font Awesome Dumbbell -->
     <script src="https://kit.fontawesome.com/5c1e507e2a.js" crossorigin="anonymous"></script>
     <title>Pathways</title>
@@ -22,7 +22,7 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                        <li><a href="{{ url_for('main.home') }}">Home</a></li>
                         <li><a href="{{ url_for('auth.login') }}" class="navbar-item">Login</a></li>
                     </ul>
                 </nav>
@@ -94,7 +94,7 @@
         </div>
         <ul class="description-btns">
             <li><a href="#hero" class="btn btn-outline back-btn">Go Back</a></li>
-            <li><a href="{{ url_for('auth.signup') }}" class="btn btn-outline">Sign Up</a></li>
+            <li><a href="{{ url_for('main.home') }}" class="btn btn-outline">Sign Up</a></li>
         </ul>
     </section>  
     <section id="more-strength" class="more-description">
@@ -137,7 +137,7 @@
         </div>
         <ul class="description-btns">
             <li><a href="#hero" class="btn btn-outline back-btn">Go Back</a></li>
-            <li><a href="{{ url_for('auth.signup') }}" class="btn btn-outline">Sign Up</a></li>
+            <li><a href="{{ url_for('main.home') }}" class="btn btn-outline">Sign Up</a></li>
         </ul>
     </section>  
     <section id="more-weight" class="more-description">
@@ -180,7 +180,7 @@
         </div>
         <ul class="description-btns">
             <li><a href="#hero" class="btn btn-outline back-btn">Go Back</a></li>
-            <li><a href="{{ url_for('auth.signup') }}" class="btn btn-outline">Sign Up</a></li>
+            <li><a href="{{ url_for('main.home') }}" class="btn btn-outline">Sign Up</a></li>
         </ul>
     </section>  
     <script src="{{ url_for('static', filename='javascript/readmore.js') }}"></script>  
