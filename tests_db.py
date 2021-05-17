@@ -1,7 +1,12 @@
 import os, unittest
 from website.models import User, Score
 from website import db, create_app, models
-import os
+import os, unittest
+import sqlite3
+
+import sqlalchemy.exc
+
+from website.models import User, Score
 
 class UserTestCase(unittest.TestCase):
 
